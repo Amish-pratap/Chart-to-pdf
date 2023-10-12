@@ -145,7 +145,8 @@ const Crimedata = () => {
 
                 const currentDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
                 pdf.text(`Report Generated ON ${currentDate}`, 7, pdf.internal.pageSize.getHeight() - 5);
-        
+                
+                pdf.text('RealAssist Property Report | Page 1 of 25',pdf.internal.pageSize.getWidth()-85,pdf.internal.pageSize.getHeight() - 5)
 
                 pdf.save('chart.pdf');
             }
